@@ -8,7 +8,8 @@ namespace SmartStockAPI.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Storage> Storage { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Storage> Storages { get; set; }
     }
 }

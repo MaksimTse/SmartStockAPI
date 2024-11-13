@@ -43,13 +43,14 @@ namespace SmartStockAPI.Controllers
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == login.Email);
             if (user == null || user.PasswordHash != HashPassword(login.PasswordHash))
             {
-                return Unauthorized("Invalid credentials");
+                return BadRequest(new { title = "Invalid credentials", status = 400 });
             }
 
             user.LastLoginDate = DateTime.Now;
             await _context.SaveChangesAsync();
+            var role = user.Role;
 
-            return Ok("User logged in successfully");
+            return Ok(new { message = "Login successful", role });
         }
 
         // Get all users (admin-only)

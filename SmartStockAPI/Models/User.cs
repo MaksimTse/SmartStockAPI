@@ -23,6 +23,6 @@ namespace SmartStockAPI.Models
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
     }
 }

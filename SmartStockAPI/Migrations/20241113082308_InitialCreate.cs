@@ -12,7 +12,7 @@ namespace SmartStockAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Storages",
+                name: "Storage",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -28,7 +28,7 @@ namespace SmartStockAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Storages", x => x.Id);
+                    table.PrimaryKey("PK_Storage", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,7 +43,7 @@ namespace SmartStockAPI.Migrations
                     LastLoginDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -55,7 +55,7 @@ namespace SmartStockAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Storages");
+                name: "Storage");
 
             migrationBuilder.DropTable(
                 name: "Users");

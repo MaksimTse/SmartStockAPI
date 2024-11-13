@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Изменено для работы с вертикальной прокруткой */
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid #444;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #444;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #6200ee;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3700b3;
+}
+
+button.delete {
+    background: #ff5252;
+}
+
+button.delete:hover {
+    background: #ff1744;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+form input, form button {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+form input:focus, form button:focus {
+    border-color: #6200ee;
+    outline: none;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #6200ee;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #3700b3;
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: #ff5252;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ff1744;
+}
+.link {
+    color: #6200ee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+td input, td textarea {
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+}
+
+td input[type="number"] {
+    width: 80px;
+}
+
+td textarea {
+    height: 50px;
+    resize: none;
+}

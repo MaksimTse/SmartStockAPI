@@ -23,7 +23,7 @@ namespace SmartStockAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
-            var products = await _context.Storages.ToListAsync();
+            var products = await _context.Storage.ToListAsync();
             return Ok(products);
         }
 
@@ -31,7 +31,7 @@ namespace SmartStockAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
-            var product = await _context.Storages.FindAsync(id);
+            var product = await _context.Storage.FindAsync(id);
             if (product == null)
                 return NotFound();
 
@@ -42,7 +42,7 @@ namespace SmartStockAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProduct(Storage product)
         {
-            _context.Storages.Add(product);
+            _context.Storage.Add(product);
             await _context.SaveChangesAsync();
             return Ok(product);
         }
@@ -51,7 +51,7 @@ namespace SmartStockAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Storage updatedProduct)
         {
-            var product = await _context.Storages.FindAsync(id);
+            var product = await _context.Storage.FindAsync(id);
             if (product == null)
                 return NotFound();
 
@@ -71,11 +71,11 @@ namespace SmartStockAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var product = await _context.Storages.FindAsync(id);
+            var product = await _context.Storage.FindAsync(id);
             if (product == null)
                 return NotFound();
 
-            _context.Storages.Remove(product);
+            _context.Storage.Remove(product);
             await _context.SaveChangesAsync();
             return Ok("Product deleted successfully");
         }
@@ -84,7 +84,7 @@ namespace SmartStockAPI.Controllers
         [HttpGet("by-country/{country}")]
         public async Task<IActionResult> GetProductsByCountry(string country)
         {
-            var products = await _context.Storages
+            var products = await _context.Storage
                                          .Where(p => p.Country == country)
                                          .ToListAsync();
             return Ok(products);
@@ -94,7 +94,7 @@ namespace SmartStockAPI.Controllers
         [HttpGet("generate-invoice/{id}")]
         public async Task<IActionResult> GenerateInvoice(int id)
         {
-            var product = await _context.Storages.FindAsync(id);
+            var product = await _context.Storage.FindAsync(id);
             if (product == null)
                 return NotFound();
 
@@ -103,12 +103,12 @@ namespace SmartStockAPI.Controllers
                 InvoiceNumber = $"INV-{id}-{DateTime.Now:yyyyMMddHHmmss}",
                 ProductName = product.ProductName,
                 Quantity = product.Quantity,
-                UnitPrice = 10, // Example unit price, set this dynamically if available
+                UnitPrice = 10,
                 TotalPrice = product.Quantity * 10,
                 Orderer = product.Orderer,
                 OrderDate = product.Date,
                 AdditionalInfo = product.AdditionalInfo,
-                DueDate = DateTime.Now.AddDays(30) // Example payment due date
+                DueDate = DateTime.Now.AddDays(30)
             };
 
             return Ok(invoice);
