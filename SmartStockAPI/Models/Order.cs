@@ -11,13 +11,13 @@ public class Order
     public int ProductId { get; set; }
 
     [ForeignKey("ProductId")]
-    public Storage? Product { get; set; } // Сделать опциональным
+    public Storage? Product { get; set; }
 
     [Required]
     public int UserId { get; set; }
 
     [ForeignKey("UserId")]
-    public User? User { get; set; } // Сделать опциональным
+    public User? User { get; set; }
 
     [Required]
     public int Quantity { get; set; }

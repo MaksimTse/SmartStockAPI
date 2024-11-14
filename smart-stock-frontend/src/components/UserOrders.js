@@ -7,9 +7,8 @@ import Navigation from './Navigation';
 const UserOrders = () => {
     const [orders, setOrders] = useState([]);
     const [message, setMessage] = useState('');
-    const [editingNotes, setEditingNotes] = useState({}); // Для хранения заметок, которые редактируются
+    const [editingNotes, setEditingNotes] = useState({});
 
-    // Получить заказы пользователя
     const fetchOrders = async () => {
         try {
             const response = await axios.get('http://localhost:5077/api/Orders');
@@ -20,26 +19,24 @@ const UserOrders = () => {
         }
     };
 
-    // Обновить заметки
     const updateNotes = async (orderId) => {
         try {
             const updatedOrder = orders.find(order => order.id === orderId);
-            updatedOrder.notes = editingNotes[orderId]; // Обновляем заметку
+            updatedOrder.notes = editingNotes[orderId];
 
-            await axios.put(`http://localhost:5077/api/Orders/${orderId}`, updatedOrder); // Предполагаем, что API поддерживает PUT запрос для обновления заказа
+            await axios.put(`http://localhost:5077/api/Orders/${orderId}`, updatedOrder);
 
-            setMessage('Order notes updated successfully!');
-            fetchOrders(); // Обновляем список заказов
+            setMessage('Tellimuse märkmete värskendamine õnnestus!');
+            fetchOrders();
         } catch (error) {
             console.error('Error updating notes:', error);
-            setMessage('Failed to update order notes.');
+            setMessage('Tellimuse märkmete värskendamine ebaõnnestus.');
         }
     };
 
-    // Создать PDF
     const generatePDF = () => {
         const doc = new jsPDF();
-        doc.text('Your Orders', 14, 10);
+        doc.text('Teie tellimused', 14, 10);
 
         const tableData = orders.map(order => [
             order.id,
@@ -50,70 +47,72 @@ const UserOrders = () => {
         ]);
 
         doc.autoTable({
-            head: [['ID', 'Product Name', 'Quantity', 'Order Date', 'Notes']],
+            head: [['ID', 'Toote nimi', 'Kogus', 'Tellimuse kuupäev', 'Märkmed']],
             body: tableData,
         });
 
-        doc.save('orders.pdf');
+        doc.save('tellimus.pdf');
     };
 
-    // Загрузка данных при первом рендере
     useEffect(() => {
         fetchOrders();
     }, []);
 
     return (
-        <div className="container">
-            <Navigation links={[{ path: '/user/products', label: 'Products' }]} />
-            <h2>Your Orders</h2>
-            {message && <p style={{ color: 'green' }}>{message}</p>}
+        <>
+            <div className="background-container"></div> {/* Добавляем фон с размитием */}
+            <div className="container">
+                <Navigation links={[{ path: '/user/products', label: 'Tooted' }]} />
+                <h2>Your Orders</h2>
+                {message && <p style={{ color: 'green' }}>{message}</p>}
 
-            {/* Таблица заказов */}
-            {orders.length > 0 ? (
-                <>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Order Date</th>
-                            <th>Notes</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {orders.map(order => (
-                            <tr key={order.id}>
-                                <td>{order.id}</td>
-                                <td>{order.productName}</td>
-                                <td>{order.quantity}</td>
-                                <td>{new Date(order.orderDate).toLocaleDateString()}</td>
-                                <td>
-                                    <input
-                                        type="text"
-                                        value={editingNotes[order.id] || order.notes || ''}
-                                        onChange={(e) => setEditingNotes({ ...editingNotes, [order.id]: e.target.value })}
-                                    />
-                                </td>
-                                <td>
-                                    <button onClick={() => updateNotes(order.id)} className="btn">
-                                        Update Notes
-                                    </button>
-                                </td>
+                {orders.length > 0 ? (
+                    <>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Toote nimi</th>
+                                <th>Kogus</th>
+                                <th>Tellimuse kuupäev</th>
+                                <th>Märkmed</th>
+                                <th>Tegevus</th>
                             </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                    <br/>
-                    <button onClick={generatePDF} className="btn">
-                        Download as PDF
-                    </button>
-                </>
-            ) : (
-                <p>No orders found.</p>
-            )}
-        </div>
+                            </thead>
+                            <tbody>
+                            {orders.map(order => (
+                                <tr key={order.id}>
+                                    <td>{order.id}</td>
+                                    <td>{order.productName}</td>
+                                    <td>{order.quantity}</td>
+                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>
+                                    <td>
+                                        <input
+                                            className="AddText"
+                                            type="text"
+                                            value={editingNotes[order.id] || order.notes || ''}
+                                            onChange={(e) => setEditingNotes({ ...editingNotes, [order.id]: e.target.value })}
+                                        />
+                                    </td>
+                                    <td>
+                                        <button onClick={() => updateNotes(order.id)} className="btn">
+                                            Uuenda märkmeid
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <br />
+                        <button onClick={generatePDF} className="btn">
+                            Laadige alla PDF-ina
+                        </button>
+                    </>
+                ) : (
+                    <p>Tellimusi ei leitud.</p>
+                )}
+            </div>
+        </>
     );
 };
 

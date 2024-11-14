@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // Импортируем Link
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import '../style.css';
 
@@ -12,14 +12,12 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        // Проверка для администратора
         if (email === 'admin@gmail.com' && password === 'admin') {
             setMessage('Welcome Admin!');
-            navigate('/admin/products'); // Перенаправляем администратора
+            navigate('/admin/products');
             return;
         }
 
-        // Запрос для обычного пользователя
         try {
             const response = await axios.post('http://localhost:5077/api/User/login', {
                 email,
@@ -27,7 +25,7 @@ const Login = () => {
             });
 
             setMessage(response.data.message || 'Login successful');
-            navigate('/user/products'); // Перенаправляем обычного пользователя
+            navigate('/user/products');
         } catch (error) {
             if (error.response) {
                 setMessage(error.response.data.title || 'Login failed');
@@ -38,31 +36,34 @@ const Login = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Login</h2>
-            <form onSubmit={handleLogin}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Login</button>
-            </form>
-            {message && <p>{message}</p>}
-            <p>
-                Don't have an account?{' '}
-                <Link to="/register" className="link">Register here</Link>
-            </p>
-        </div>
+        <>
+            <div className="background-container"></div> {}
+            <div className="container">
+                <h2>Logi Sisse</h2>
+                <form onSubmit={handleLogin}>
+                    <input
+                        type="email"
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Salasõna"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Logi Sisse</button>
+                </form>
+                {message && <p>{message}</p>}
+                <p>
+                    Kas teil pole kontot?{' '}
+                    <Link to="/register" className="link">Registreeri siin</Link>
+                </p>
+            </div>
+        </>
     );
 };
 

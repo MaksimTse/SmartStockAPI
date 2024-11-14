@@ -5,9 +5,8 @@ const Navigation = ({ links }) => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Очистка данных пользователя (если хранятся в localStorage или Context)
         localStorage.clear();
-        navigate('/login'); // Перенаправление на страницу входа
+        navigate('/login');
     };
 
     return (
@@ -17,7 +16,7 @@ const Navigation = ({ links }) => {
                     {link.label}
                 </a>
             ))}
-            <button onClick={handleLogout} className="logout-btn">Logout</button>
+            <button onClick={handleLogout} className="logout-btn">Logi välja</button>
         </nav>
     );
 };

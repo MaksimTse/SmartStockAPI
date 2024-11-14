@@ -10,13 +10,15 @@ const Products = () => {
         country: '',
         productName: '',
         quantity: 0,
-        orderer: '',
-        date: '',
+        orderer: 'NONE',
+        date: new Date().toISOString().split('T')[0],
         additionalInfo: '',
     });
     const [message, setMessage] = useState('');
+    const [showForm, setShowForm] = useState(false);
+    const [isEditing, setIsEditing] = useState(false);
+    const [editProductId, setEditProductId] = useState(null);
 
-    // Получить все продукты
     const fetchProducts = async () => {
         try {
             const response = await axios.get('http://localhost:5077/api/Storage');
@@ -26,149 +28,165 @@ const Products = () => {
         }
     };
 
-    // Удалить продукт
     const deleteProduct = async (id) => {
         try {
             await axios.delete(`http://localhost:5077/api/Storage/${id}`);
             setMessage('Product deleted successfully.');
-            fetchProducts(); // Обновляем список после удаления
+            fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);
         }
     };
 
-    // Добавить продукт
-    const addProduct = async (e) => {
+    const saveProduct = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5077/api/Storage', newProduct);
-            setMessage('Product added successfully.');
-            fetchProducts(); // Обновляем список после добавления
-            setNewProduct({
-                category: '',
-                country: '',
-                productName: '',
-                quantity: 0,
-                orderer: '',
-                date: '',
-                additionalInfo: '',
-            });
+            if (isEditing) {
+                await axios.put(`http://localhost:5077/api/Storage/${editProductId}`, newProduct);
+                setMessage('Toote värskendamine õnnestus.');
+            } else {
+                await axios.post('http://localhost:5077/api/Storage', newProduct);
+                setMessage('Toode edukalt lisatud.');
+            }
+            fetchProducts();
+            resetForm();
         } catch (error) {
-            console.error('Error adding product:', error);
+            console.error('Error saving product:', error);
         }
     };
 
-    // Загрузка данных при первом рендере
+    const startEditing = (product) => {
+        setIsEditing(true);
+        setEditProductId(product.id);
+        setNewProduct({
+            category: product.category,
+            country: product.country,
+            productName: product.productName,
+            quantity: product.quantity,
+            orderer: product.orderer,
+            date: product.date,
+            additionalInfo: product.additionalInfo,
+        });
+        setShowForm(true);
+    };
+
+    const resetForm = () => {
+        setNewProduct({
+            category: '',
+            country: '',
+            productName: '',
+            quantity: 0,
+            orderer: 'NONE',
+            date: new Date().toISOString().split('T')[0],
+            additionalInfo: '',
+        });
+        setIsEditing(false);
+        setEditProductId(null);
+        setShowForm(false);
+    };
+
     useEffect(() => {
         fetchProducts();
     }, []);
 
-    // Ссылки для навигации
-    const adminLinks = [
-        { path: '/admin/users', label: 'Manage Users' },
-    ];
-
-    const userLinks = [
-        { path: '/user/orders', label: 'Orders' },
-    ];
-
-    // Здесь можно будет подставить ссылки в зависимости от роли пользователя.
-    const navigationLinks = adminLinks; // Замените на `userLinks` для пользователей
-
     return (
-        <div className="container">
-            <Navigation links={navigationLinks} /> {/* Навигация */}
+        <>
+            <div className="background-container"></div> {}
+            <div className="container">
+                <Navigation links={[{ path: '/admin/users', label: 'Kasutajate haldamine' }]} />
 
-            <h2>Product Management</h2>
-            {message && <p>{message}</p>}
+                <h2>Tootehaldus</h2>
+                {message && <p>{message}</p>}
 
-            {/* Таблица с продуктами */}
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Category</th>
-                    <th>Country</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Orderer</th>
-                    <th>Date</th>
-                    <th>Additional Info</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {products.map((product) => (
-                    <tr key={product.id}>
-                        <td>{product.id}</td>
-                        <td>{product.category}</td>
-                        <td>{product.country}</td>
-                        <td>{product.productName}</td>
-                        <td>{product.quantity}</td>
-                        <td>{product.orderer}</td>
-                        <td>{new Date(product.date).toLocaleDateString()}</td>
-                        <td>{product.additionalInfo}</td>
-                        <td>
-                            <button onClick={() => deleteProduct(product.id)}>Delete</button>
-                        </td>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Kategooria</th>
+                        <th>Riik</th>
+                        <th>Toote nimi</th>
+                        <th>Kogus</th>
+                        <th>Kuupäev</th>
+                        <th>Lisainfo</th>
+                        <th>Tegevused</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {products.map((product) => (
+                        <tr key={product.id}>
+                            <td>{product.id}</td>
+                            <td>{product.category}</td>
+                            <td>{product.country}</td>
+                            <td>{product.productName}</td>
+                            <td>{product.quantity}</td>
+                            <td>{new Date(product.date).toLocaleDateString()}</td>
+                            <td>{product.additionalInfo}</td>
+                            <td className="line">
+                                <button className="logout-btn" onClick={() => deleteProduct(product.id)}>Kustuta</button>
+                                <button className="btn2" onClick={() => startEditing(product)}>Muuda</button>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
 
-            {/* Форма для добавления продукта */}
-            <h3>Add New Product</h3>
-            <form onSubmit={addProduct}>
-                <input
-                    type="text"
-                    placeholder="Category"
-                    value={newProduct.category}
-                    onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Country"
-                    value={newProduct.country}
-                    onChange={(e) => setNewProduct({ ...newProduct, country: e.target.value })}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Product Name"
-                    value={newProduct.productName}
-                    onChange={(e) => setNewProduct({ ...newProduct, productName: e.target.value })}
-                    required
-                />
-                <input
-                    type="number"
-                    placeholder="Quantity"
-                    value={newProduct.quantity}
-                    onChange={(e) => setNewProduct({ ...newProduct, quantity: parseInt(e.target.value) })}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Orderer"
-                    value={newProduct.orderer}
-                    onChange={(e) => setNewProduct({ ...newProduct, orderer: e.target.value })}
-                    required
-                />
-                <input
-                    type="date"
-                    value={newProduct.date}
-                    onChange={(e) => setNewProduct({ ...newProduct, date: e.target.value })}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Additional Info"
-                    value={newProduct.additionalInfo}
-                    onChange={(e) => setNewProduct({ ...newProduct, additionalInfo: e.target.value })}
-                />
-                <button type="submit">Add Product</button>
-            </form>
-        </div>
+                <h3
+                    className="add-product-title"
+                    onClick={() => {
+                        resetForm();
+                        setShowForm(true);
+                    }}
+                    style={{ cursor: 'pointer' }}
+                >
+                    ❯ {isEditing ? 'Redigeeri toodet' : 'Lisa uus toode'} ❮
+                </h3>
+
+                {showForm && (
+                    <form onSubmit={saveProduct}>
+                        <input
+                            type="text"
+                            placeholder="Kategooria"
+                            value={newProduct.category}
+                            onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Riik"
+                            value={newProduct.country}
+                            onChange={(e) => setNewProduct({ ...newProduct, country: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Toote nimi"
+                            value={newProduct.productName}
+                            onChange={(e) => setNewProduct({ ...newProduct, productName: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="number"
+                            placeholder="Kogus"
+                            value={newProduct.quantity}
+                            onChange={(e) =>
+                                setNewProduct({ ...newProduct, quantity: parseInt(e.target.value) })
+                            }
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Lisainfo"
+                            value={newProduct.additionalInfo}
+                            onChange={(e) =>
+                                setNewProduct({ ...newProduct, additionalInfo: e.target.value })
+                            }
+                        />
+                        <button type="submit">{isEditing ? 'Uuenda toodet' : 'Lisa toode'}</button>
+                        <button type="button" onClick={resetForm}>Tühista</button>
+                    </form>
+                )}
+            </div>
+        </>
     );
 };
 

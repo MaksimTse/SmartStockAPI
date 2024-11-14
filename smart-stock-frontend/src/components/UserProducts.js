@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 const UserProducts = () => {
     const [products, setProducts] = useState([]);
     const [message, setMessage] = useState('');
-    const [orderData, setOrderData] = useState({}); // Объект для хранения данных заказа для каждого продукта
+    const [orderData, setOrderData] = useState({});
 
     const fetchProducts = async () => {
         try {
@@ -17,7 +17,6 @@ const UserProducts = () => {
         }
     };
 
-    // Обработчик изменения количества
     const handleQuantityChange = (e, productId) => {
         setOrderData({
             ...orderData,
@@ -28,7 +27,6 @@ const UserProducts = () => {
         });
     };
 
-    // Обработчик изменения заметки
     const handleNotesChange = (e, productId) => {
         setOrderData({
             ...orderData,
@@ -44,7 +42,7 @@ const UserProducts = () => {
         const { quantity, notes } = orderData[id] || {};
 
         if (!quantity || quantity < 1) {
-            setMessage('Please specify a valid quantity.');
+            setMessage('Palun määrake kehtiv kogus.');
             return;
         }
 
@@ -54,19 +52,19 @@ const UserProducts = () => {
             await axios.post('http://localhost:5077/api/Orders', {
                 productId: product.id,
                 userId: userId,
-                quantity: quantity, // Используем выбранное количество
-                notes: notes || '', // Передаем заметку, если она есть
+                quantity: quantity,
+                notes: notes || '',
             });
 
-            setMessage(`Order for ${product.productName} has been placed.`);
-            fetchProducts(); // Обновить список продуктов
+            setMessage(`Toote ${product.productName} tellimus on esitatud.`);
+            fetchProducts();
         } catch (error) {
-            console.error('Error placing order:', error);
+            console.error('Viga tellimuse esitamisel:', error);
 
             if (error.response) {
-                setMessage(error.response.data.message || 'Failed to place order. Please try again.');
+                setMessage(error.response.data.message || 'Tellimuse esitamine ebaõnnestus. Palun proovi uuesti.');
             } else {
-                setMessage('Failed to place order. Please try again.');
+                setMessage('Tellimuse esitamine ebaõnnestus. Palun proovi uuesti.');
             }
         }
     };
@@ -76,75 +74,76 @@ const UserProducts = () => {
     }, []);
 
     const userLinks = [
-        { path: '/user/orders', label: 'My Orders' },
+        { path: '/user/orders', label: 'Minu tellimused' },
     ];
 
     return (
-        <div className="container">
-            <Navigation links={userLinks} />
+        <>
+            <div className="background-container"></div> {}
+            <div className="container">
+                <Navigation links={userLinks} />
 
-            <h2>Available Products</h2>
-            {message && <p style={{ color: message.includes('Failed') ? 'red' : 'green' }}>{message}</p>}
+                <h2>Saadaolevad tooted</h2>
+                {message && <p style={{ color: message.includes('Failed') ? 'red' : 'green' }}>{message}</p>}
 
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Category</th>
-                    <th>Country</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Order</th>
-                </tr>
-                </thead>
-                <tbody>
-                {products.map((product) => (
-                    <tr key={product.id}>
-                        <td>{product.id}</td>
-                        <td>{product.category}</td>
-                        <td>{product.country}</td>
-                        <td>{product.productName}</td>
-                        <td>{product.quantity}</td>
-                        <td>
-                            {/* Добавим поля для ввода количества и заметки */}
-                            <input
-                                type="number"
-                                value={orderData[product.id]?.quantity || 1} // Привязываем количество к продукту
-                                onChange={(e) => handleQuantityChange(e, product.id)}
-                                min="1"
-                                max={product.quantity}
-                                style={{ width: '60px', marginRight: '8px' }}
-                            />
-                            <textarea
-                                value={orderData[product.id]?.notes || ''}
-                                onChange={(e) => handleNotesChange(e, product.id)}
-                                placeholder="Add a note..."
-                                style={{
-                                    width: '150px',
-                                    height: '50px',
-                                    resize: 'none',
-                                    marginBottom: '8px',
-                                }}
-                            />
-                            <button
-                                onClick={() => orderProduct(product)}
-                                style={{
-                                    padding: '8px 16px',
-                                    backgroundColor: '#6200ee',
-                                    color: 'white',
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    cursor: 'pointer',
-                                }}
-                            >
-                                Order
-                            </button>
-                        </td>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Kategooria</th>
+                        <th>Riik</th>
+                        <th>Toote nimi</th>
+                        <th>Kogus</th>
+                        <th>Telli</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                    {products.map((product) => (
+                        <tr key={product.id}>
+                            <td>{product.id}</td>
+                            <td>{product.category}</td>
+                            <td>{product.country}</td>
+                            <td>{product.productName}</td>
+                            <td>{product.quantity}</td>
+                            <td className="line">
+                                <input
+                                    type="number"
+                                    value={orderData[product.id]?.quantity || 1}
+                                    onChange={(e) => handleQuantityChange(e, product.id)}
+                                    min="1"
+                                    max={product.quantity}
+                                    style={{ width: '60px', marginRight: '8px' }}
+                                />
+                                <textarea
+                                    value={orderData[product.id]?.notes || ''}
+                                    onChange={(e) => handleNotesChange(e, product.id)}
+                                    placeholder="Lisa märk..."
+                                    style={{
+                                        width: '150px',
+                                        height: '24px',
+                                        resize: 'none',
+                                        marginBottom: '8px',
+                                    }}
+                                />
+                                <button
+                                    className="btn2"
+                                    onClick={() => orderProduct(product)}
+                                    style={{
+                                        height: '41px',
+                                        resize: 'none',
+                                        marginBottom: '8px',
+                                        marginTop: '5px',
+                                    }}
+                                >
+                                    Telli
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
+        </>
     );
 };
 

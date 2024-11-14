@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../style.css';
-import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState(''); // Новое поле для номера телефона
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
@@ -17,13 +16,12 @@ const Register = () => {
             const response = await axios.post('http://localhost:5077/api/User/register', {
                 email,
                 passwordHash: password,
-                phoneNumber, // Передаем номер телефона
+                phoneNumber,
             });
             setMessage(response.data.message || 'Registration successful');
-            navigate('/products'); // Обработка ответа
+            navigate('/products');
         } catch (error) {
             if (error.response) {
-                // Обработка ошибок валидации
                 const errors = error.response.data.errors;
                 if (errors) {
                     const errorMessages = Object.values(errors).flat().join(' ');
@@ -40,41 +38,44 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Register</h2>
-            <form onSubmit={handleRegister}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Phone Number"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    required
-                />
-                <button type="submit">Register</button>
-            </form>
-            {message && (
+        <>
+            <div className="background-container"></div> {}
+            <div className="container">
+                <h2>Registreeri</h2>
+                <form onSubmit={handleRegister}>
+                    <input
+                        type="email"
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="password"
+                        placeholder="Salasõna"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="Telefoninumber"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Registreeri</button>
+                </form>
+                {message && (
+                    <p>
+                        {typeof message === 'string' ? message : JSON.stringify(message)}
+                    </p>
+                )}
                 <p>
-                    {typeof message === 'string' ? message : JSON.stringify(message)}
+                    Kas teil on juba konto? <Link to="/login" className="link">Logi Sisse</Link>
                 </p>
-            )}
-            <p>
-                Already have an account? <Link to="/login">Login</Link>
-            </p>
-        </div>
+            </div>
+        </>
     );
 };
 
