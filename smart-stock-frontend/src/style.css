@@ -5,7 +5,7 @@ body {
     color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Изменено для работы с вертикальной прокруткой */
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -105,7 +105,7 @@ form input:focus, form button:focus {
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 11px 12px;
     margin-right: 10px;
     background-color: #6200ee;
     border-radius: 5px;
@@ -117,7 +117,7 @@ form input:focus, form button:focus {
 }
 
 .logout-btn {
-    padding: 5px 10px;
+    padding: 11px 12px;
     color: #ffffff;
     background-color: #ff5252;
     border: none;
@@ -157,4 +157,19 @@ td input[type="number"] {
 td textarea {
     height: 50px;
     resize: none;
+}
+
+.btn{
+    margin: 10px;
+    width: 80px;
+}
+
+h3.add-product-title {
+    color: #ffffff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h3.add-product-title:hover {
+    color: #6200ee;
+    text-shadow: 0 0 8px #6200ee;
 }
