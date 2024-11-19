@@ -103,7 +103,7 @@ const UserOrders = () => {
             <div className="background-container"></div> {}
             <div className="container">
                     <Navigation links={[{ path: '/user/products', label: 'Tooted' }]} />
-                <h2>Your Orders</h2>
+                <h2>Teie tellimused</h2>
                 {message && <p style={{ color: 'green' }}>{message}</p>}
 
                 {orders.length > 0 ? (
