@@ -202,6 +202,11 @@ td textarea {
     width: 80px;
 }
 
+.btn-pdf {
+    margin: 10px;
+    width: 100px;
+}
+
 h3.add-product-title {
     color: #ffffff;
     transition: color 0.3s ease, text-shadow 0.3s ease;
