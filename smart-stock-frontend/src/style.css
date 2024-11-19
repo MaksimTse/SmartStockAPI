@@ -201,7 +201,6 @@ td textarea {
     margin: 10px;
     width: 80px;
 }
-
 .btn-pdf {
     margin: 10px;
     width: 100px;
@@ -220,5 +219,40 @@ h3.add-product-title:hover {
 .line {
     max-height: 60px;
     display: inline-flex;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -18px;
+    left: 20px; /* Увеличиваем отступ слева */
+    font-size: 12px;
+    color: #3a3a3a;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
