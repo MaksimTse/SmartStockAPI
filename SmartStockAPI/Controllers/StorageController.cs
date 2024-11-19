@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SmartStockAPI.Data;
 using SmartStockAPI.Models;
@@ -56,7 +56,7 @@ namespace SmartStockAPI.Controllers
                 return NotFound();
 
             product.Category = updatedProduct.Category;
-            product.Country = updatedProduct.Country;
+            product.Location = updatedProduct.Location;
             product.ProductName = updatedProduct.ProductName;
             product.Quantity = updatedProduct.Quantity;
             product.Orderer = updatedProduct.Orderer;
@@ -81,11 +81,11 @@ namespace SmartStockAPI.Controllers
         }
 
         // View inventory by location
-        [HttpGet("by-country/{country}")]
-        public async Task<IActionResult> GetProductsByCountry(string country)
+        [HttpGet("by-country/{location}")]
+        public async Task<IActionResult> GetProductsByCountry(string location)
         {
             var products = await _context.Storage
-                                         .Where(p => p.Country == country)
+                                         .Where(p => p.Location == location)
                                          .ToListAsync();
             return Ok(products);
         }
