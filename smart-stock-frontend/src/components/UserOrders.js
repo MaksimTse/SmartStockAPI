@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 
 const UserOrders = () => {
     const [orders, setOrders] = useState([]);
+    const [users, setUsers] = useState([]);
     const [message, setMessage] = useState('');
     const [editingNotes, setEditingNotes] = useState({});
 
@@ -34,35 +35,74 @@ const UserOrders = () => {
         }
     };
 
-    const generatePDF = () => {
-        const doc = new jsPDF();
-        doc.text('Teie tellimused', 14, 10);
-
-        const tableData = orders.map(order => [
-            order.id,
-            order.productName,
-            order.quantity,
-            new Date(order.orderDate).toLocaleDateString(),
-            order.notes || 'N/A',
-        ]);
-
-        doc.autoTable({
-            head: [['ID', 'Toote nimi', 'Kogus', 'Tellimuse kuupäev', 'Märkmed']],
-            body: tableData,
-        });
-
-        doc.save('tellimus.pdf');
+    const fetchUsers = async () => {
+        try {
+            const response = await axios.get('http://localhost:5077/api/User/all');
+            setUsers(response.data);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
     };
+
+    const generatePDF = () => {
+        try {
+            const doc = new jsPDF();
+
+            doc.setFontSize(16);
+            doc.text('Teie tellimused', 14, 10);
+
+            const randomArvNr = Math.floor(100000 + Math.random() * 900000).toString();
+            const randomRegCode = Math.floor(100000 + Math.random() * 900000).toString();
+            const todayDate = new Date().toLocaleDateString();
+
+            doc.setFontSize(12);
+            doc.text(`Arve nr: ${randomArvNr}`, 14, 20);
+            doc.text(`Koostanud: ${todayDate}`, 14, 25);
+
+            const tableData = orders.map(order => [
+                order.productName,
+                order.quantity,
+                new Date(order.orderDate).toLocaleDateString(),
+                order.notes || 'N/A',
+            ]);
+
+            doc.autoTable({
+                head: [['Toote nimi', 'Kogus', 'Tellimuse kuupäev', 'Märkmed']],
+                body: tableData,
+                startY: 40,
+            });
+
+            const y = doc.lastAutoTable.finalY + 10;
+
+            doc.setFontSize(12);
+            doc.text('Juriidiline info', 14, y);
+            doc.text(`Registrikood: ${randomRegCode}`, 14, y + 10);
+
+            users.forEach((user, index) => {
+                const userY = y + 20 + index * 10;
+                doc.text(`E-mail: ${user.email || 'Not Specified'}`, 14, userY);
+                doc.text(`Telefoni number: ${user.phoneNumber || 'Not Specified'}`, 14, userY + 5);
+            });
+
+            doc.save('tellimus.pdf');
+        } catch (error) {
+            console.error('Error while generating PDF:', error);
+            setMessage('Error while creating PDF.');
+        }
+    };
+
+
 
     useEffect(() => {
         fetchOrders();
+        fetchUsers();
     }, []);
 
     return (
         <>
-            <div className="background-container"></div> {/* Добавляем фон с размитием */}
+            <div className="background-container"></div> {}
             <div className="container">
-                <Navigation links={[{ path: '/user/products', label: 'Tooted' }]} />
+                    <Navigation links={[{ path: '/user/products', label: 'Tooted' }]} />
                 <h2>Your Orders</h2>
                 {message && <p style={{ color: 'green' }}>{message}</p>}
 
@@ -104,8 +144,8 @@ const UserOrders = () => {
                             </tbody>
                         </table>
                         <br />
-                        <button onClick={generatePDF} className="btn">
-                            Laadige alla PDF-ina
+                        <button onClick={generatePDF} className="btn-pdf">
+                            Laadi alla PDF-ina
                         </button>
                     </>
                 ) : (
