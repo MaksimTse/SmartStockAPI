@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SmartStockAPI.Models
@@ -12,7 +12,7 @@ namespace SmartStockAPI.Models
         public string Category { get; set; }
 
         [Required]
-        public string Country { get; set; }
+        public string Location { get; set; }
 
         [Required]
         public string ProductName { get; set; }
