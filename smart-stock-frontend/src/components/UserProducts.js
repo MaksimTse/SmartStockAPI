@@ -91,7 +91,7 @@ const UserProducts = () => {
                     <tr>
                         <th>ID</th>
                         <th>Kategooria</th>
-                        <th>Riik</th>
+                        <th>Asukoht</th>
                         <th>Toote nimi</th>
                         <th>Kogus</th>
                         <th>Telli</th>
@@ -102,7 +102,7 @@ const UserProducts = () => {
                         <tr key={product.id}>
                             <td>{product.id}</td>
                             <td>{product.category}</td>
-                            <td>{product.country}</td>
+                            <td>{product.location}</td>
                             <td>{product.productName}</td>
                             <td>{product.quantity}</td>
                             <td className="line">
