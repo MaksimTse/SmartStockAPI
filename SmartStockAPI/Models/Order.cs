@@ -12,7 +12,7 @@ public class Order
 
     [ForeignKey("ProductId")]
     public Storage? Product { get; set; }
-
+     
     [Required]
     public int UserId { get; set; }
 

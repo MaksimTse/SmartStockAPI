@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SmartStockAPI.Models
 {
@@ -29,5 +30,15 @@ namespace SmartStockAPI.Models
         public string AdditionalInfo { get; set; }
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
+
+        [ForeignKey("Supplier")]
+        public int SupplierId { get; set; }
+        public Supplier? Supplier { get; set; }
+
+        [Required]
+        public decimal SupplierPrice { get; set; } 
+
+        [Required]
+        public decimal UserPrice { get; set; }
     }
 }

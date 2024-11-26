@@ -47,13 +47,11 @@ namespace SmartStockAPI.Controllers
             return Ok(product);
         }
 
-        // Update an existing product
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Storage updatedProduct)
         {
             var product = await _context.Storage.FindAsync(id);
-            if (product == null)
-                return NotFound();
+            if (product == null) return NotFound();
 
             product.Category = updatedProduct.Category;
             product.Location = updatedProduct.Location;
@@ -62,10 +60,13 @@ namespace SmartStockAPI.Controllers
             product.Orderer = updatedProduct.Orderer;
             product.Date = updatedProduct.Date;
             product.AdditionalInfo = updatedProduct.AdditionalInfo;
+            product.SupplierPrice = updatedProduct.SupplierPrice;
+            product.UserPrice = updatedProduct.UserPrice;
 
             await _context.SaveChangesAsync();
             return Ok(product);
         }
+
 
         // Delete a product
         [HttpDelete("{id}")]

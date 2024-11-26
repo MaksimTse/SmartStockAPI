@@ -10,6 +10,7 @@ namespace SmartStockAPI.Data
 
         public DbSet<Order> Orders { get; set; }
         public DbSet<Storage> Storage { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }
