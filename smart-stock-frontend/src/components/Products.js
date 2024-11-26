@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../style.css';
 import Navigation from './Navigation';
 
 const Products = () => {
@@ -10,14 +9,15 @@ const Products = () => {
         location: '',
         productName: '',
         quantity: 0,
-        orderer: 'NONE',
         date: new Date().toISOString().split('T')[0],
-        additionalInfo: '',
+        supplierPrice: 0,
+        userPrice: 0,
     });
+
     const [message, setMessage] = useState('');
-    const [showForm, setShowForm] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [editProductId, setEditProductId] = useState(null);
+    const [showForm, setShowForm] = useState(false); // Состояние видимости формы
 
     const fetchProducts = async () => {
         try {
@@ -43,10 +43,10 @@ const Products = () => {
         try {
             if (isEditing) {
                 await axios.put(`http://localhost:5077/api/Storage/${editProductId}`, newProduct);
-                setMessage('Toote värskendamine õnnestus.');
+                setMessage('Product updated successfully.');
             } else {
                 await axios.post('http://localhost:5077/api/Storage', newProduct);
-                setMessage('Toode edukalt lisatud.');
+                setMessage('Product added successfully.');
             }
             fetchProducts();
             resetForm();
@@ -63,9 +63,9 @@ const Products = () => {
             location: product.location,
             productName: product.productName,
             quantity: product.quantity,
-            orderer: product.orderer,
             date: product.date,
-            additionalInfo: product.additionalInfo,
+            supplierPrice: product.supplierPrice,
+            userPrice: product.userPrice,
         });
         setShowForm(true);
     };
@@ -73,12 +73,12 @@ const Products = () => {
     const resetForm = () => {
         setNewProduct({
             category: '',
-            lcoation: '',
+            location: '',
             productName: '',
             quantity: 0,
-            orderer: 'NONE',
-            date: new Date().toISOString().split('T')[0],
-            additionalInfo: '',
+            date: new Date().toISOString(),
+            supplierPrice: 0,
+            userPrice: 0,
         });
         setIsEditing(false);
         setEditProductId(null);
@@ -91,24 +91,23 @@ const Products = () => {
 
     return (
         <>
-            <div className="background-container"></div> {}
+            <div className="background-container"> </div>
             <div className="container">
-                <Navigation links={[{ path: '/admin/users', label: 'Kasutajate haldamine' }]} />
-
-                <h2>Tootehaldus</h2>
+                <Navigation />
+                <h2>Product Management</h2>
                 {message && <p>{message}</p>}
 
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Kategooria</th>
-                        <th>Asukoht</th>
-                        <th>Toote nimi</th>
-                        <th>Kogus</th>
-                        <th>Kuupäev</th>
-                        <th>Lisainfo</th>
-                        <th>Tegevused</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Supplier Price</th>
+                        <th>User Price</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -119,91 +118,78 @@ const Products = () => {
                             <td>{product.location}</td>
                             <td>{product.productName}</td>
                             <td>{product.quantity}</td>
-                            <td>{new Date(product.date).toLocaleDateString()}</td>
-                            <td>{product.additionalInfo}</td>
-                            <td className="line">
-                                <button className="logout-btn" onClick={() => deleteProduct(product.id)}>Kustuta</button>
-                                <button className="btn2" onClick={() => startEditing(product)}>Muuda</button>
+                            <td>{product.supplierPrice}</td>
+                            <td>{product.userPrice}</td>
+                            <td>
+                                <button className="btn2" onClick={() => startEditing(product)}>Edit</button>
+                                <button className="logout-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
 
-                <h3
-                    className="add-product-title"
-                    onClick={() => {
-                        resetForm();
-                        setShowForm(true);
-                    }}
-                    style={{ cursor: 'pointer' }}
-                >
-                    ❯ {isEditing ? 'Redigeeri toodet' : 'Lisa uus toode'} ❮
-                </h3>
+                {!showForm && (
+                    <h3
+                        onClick={() => setShowForm(true)}
+                        style={{ cursor: 'pointer', color: '#ffffff', transition: 'color 0.3s ease' }}
+                        onMouseEnter={(e) => (e.target.style.color = '#6200ee')}
+                        onMouseLeave={(e) => (e.target.style.color = '#ffffff')}
+                    >
+                        Add New Product
+                    </h3>
+                )}
 
                 {showForm && (
                     <form onSubmit={saveProduct}>
-                        <div className="input-container">
-                            <label htmlFor="category">Kategooria</label>
-                            <input
-                                id="category"
-                                type="text"
-                                placeholder="Kategooria"
-                                value={newProduct.category}
-                                onChange={(e) => setNewProduct({...newProduct, category: e.target.value})}
-                                required
-                            />
-                        </div>
-
-                        <div className="input-container">
-                            <label htmlFor="location">Lokaadi (e.g., A1 - Shelf 1)</label>
-                            <input
-                                id="location"
-                                type="text"
-                                placeholder="Lokaadi (e.g., A1 - Shelf 1)"
-                                value={newProduct.location}
-                                onChange={(e) => setNewProduct({...newProduct, location: e.target.value})}
-                                required
-                            />
-                        </div>
-
-                        <div className="input-container">
-                            <label htmlFor="productName">Toote nimi</label>
-                            <input
-                                id="productName"
-                                type="text"
-                                placeholder="Toote nimi"
-                                value={newProduct.productName}
-                                onChange={(e) => setNewProduct({...newProduct, productName: e.target.value})}
-                                required
-                            />
-                        </div>
-
-                        <div className="input-container">
-                            <label htmlFor="quantity">Kogus</label>
-                            <input
-                                id="quantity"
-                                type="number"
-                                placeholder="Kogus"
-                                value={newProduct.quantity}
-                                onChange={(e) => setNewProduct({...newProduct, quantity: parseInt(e.target.value)})}
-                                required
-                            />
-                        </div>
-
-                        <div className="input-container">
-                            <label htmlFor="additionalInfo">Lisainfo</label>
-                            <input
-                                id="additionalInfo"
-                                type="text"
-                                placeholder="Lisainfo"
-                                value={newProduct.additionalInfo}
-                                onChange={(e) => setNewProduct({...newProduct, additionalInfo: e.target.value})}
-                            />
-                        </div>
-
-                        <button type="submit">{isEditing ? 'Uuenda toodet' : 'Lisa toode'}</button>
-                        <button type="button" onClick={resetForm}>Tühista</button>
+                        <input
+                            type="text"
+                            placeholder="Category"
+                            value={newProduct.category}
+                            onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Location"
+                            value={newProduct.location}
+                            onChange={(e) => setNewProduct({ ...newProduct, location: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Product Name"
+                            value={newProduct.productName}
+                            onChange={(e) => setNewProduct({ ...newProduct, productName: e.target.value })}
+                            required
+                        />
+                        <input
+                            type="number"
+                            placeholder="Quantity"
+                            value={newProduct.quantity}
+                            onChange={(e) => setNewProduct({ ...newProduct, quantity: parseInt(e.target.value) })}
+                            required
+                        />
+                        <input
+                            type="number"
+                            placeholder="Supplier Price"
+                            value={newProduct.supplierPrice}
+                            onChange={(e) => setNewProduct({ ...newProduct, supplierPrice: parseFloat(e.target.value) })}
+                            required
+                        />
+                        <input
+                            type="number"
+                            placeholder="User Price"
+                            value={newProduct.userPrice}
+                            onChange={(e) => setNewProduct({ ...newProduct, userPrice: parseFloat(e.target.value) })}
+                            required
+                        />
+                        <button className="btn2" type="submit">
+                            {isEditing ? 'Update Product' : 'Add Product'}
+                        </button>
+                        <button className="logout-btn" type="button" onClick={resetForm}>
+                            Cancel
+                        </button>
                     </form>
                 )}
             </div>

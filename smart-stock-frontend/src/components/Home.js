@@ -10,8 +10,8 @@ function Home() {
             <div className="container">
                 <h2 className="USNone">Welcome to Smart Stock</h2>
                 <p className="USNone">Please select your user type:</p>
-                <button className="btn2" onClick={() => navigate('/register')}>Customer</button>
-                <button className="btn2" onClick={() => navigate('/supplier-register')}>Supplier</button>
+                <button className="btn2" onClick={() => navigate('/login')}>Customer</button>
+                <button className="btn2" onClick={() => navigate('/supplier-login')}>Supplier</button>
             </div>
         </>
     );

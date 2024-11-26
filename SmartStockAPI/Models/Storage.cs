@@ -21,18 +21,17 @@ namespace SmartStockAPI.Models
         [Required]
         public int Quantity { get; set; }
 
-        [Required]
-        public string Orderer { get; set; }
+        public string? Orderer { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
 
-        public string AdditionalInfo { get; set; }
+        public string? AdditionalInfo { get; set; }
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         [ForeignKey("Supplier")]
-        public int SupplierId { get; set; }
+        public int? SupplierId { get; set; }
         public Supplier? Supplier { get; set; }
 
         [Required]

@@ -6,7 +6,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import SupplierLogin from "./components/SupplierLogin";
 import SupplierRegister from "./components/SupplierRegister";
-import AdminDashboard from "./components/AdminDashboard";
+import Products from "./components/Products";
+import Suppliers from "./components/Suppliers";
+import Customers from "./components/Customers";
 
 const App = () => {
     return (
@@ -16,10 +18,9 @@ const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/supplier-login" element={<SupplierLogin />} />
             <Route path="/supplier-register" element={<SupplierRegister />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
-            <Route path="/add-product" element={<h2 style={{ color: '#fff' }}>Add Product Page</h2>} />
-            <Route path="/view-customers" element={<h2 style={{ color: '#fff' }}>Customers Page</h2>} />
-            <Route path="/view-suppliers" element={<h2 style={{ color: '#fff' }}>Suppliers Page</h2>} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/customers" element={<Customers />} />
+            <Route path="/suppliers" element={<Suppliers />} />
         </Routes>
     );
 }

@@ -93,6 +93,29 @@ namespace SmartStockAPI.Controllers
             return Ok("Supplier approved successfully.");
         }
 
+        [HttpPut("unapprove/{id}")]
+        public async Task<IActionResult> UnapproveSupplier(int id)
+        {
+            try
+            {
+                var supplier = await _context.Suppliers.FindAsync(id);
+                if (supplier == null)
+                {
+                    return NotFound("Supplier not found.");
+                }
+
+                supplier.IsApproved = false; // Устанавливаем статус неподтверждённого
+                await _context.SaveChangesAsync();
+
+                return Ok("Supplier unapproved successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while unapproving the supplier.", details = ex.Message });
+            }
+        }
+
+
         // Utility: Hashing password for security
         private string HashPassword(string password)
         {

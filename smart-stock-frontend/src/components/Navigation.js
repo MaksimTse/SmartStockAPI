@@ -1,23 +1,20 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Navigation = ({ links }) => {
+const Navigation = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        localStorage.clear();
-        navigate('/login');
+        navigate('/');
     };
 
     return (
-        <nav className="navigation">
-            {links.map((link) => (
-                <a key={link.path} href={link.path} className="nav-link">
-                    {link.label}
-                </a>
-            ))}
-            <button onClick={handleLogout} className="logout-btn">Logi välja</button>
-        </nav>
+        <div className="navigation">
+            <Link to="/products" className="nav-link">Products</Link>
+            <Link to="/customers" className="nav-link">Customers</Link>
+            <Link to="/suppliers" className="nav-link">Suppliers</Link>
+            <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        </div>
     );
 };
 

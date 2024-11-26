@@ -24,7 +24,7 @@ function SupplierRegister() {
 
     return (
         <>
-            <div className="background-container"></div>
+            <div className="background-container"></div> {}
             <div className="container">
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>

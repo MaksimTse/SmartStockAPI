@@ -9,7 +9,7 @@ function Login() {
 
     const handleLogin = async () => {
         if (email === 'admin@gmail.com' && password === 'admin') {
-            navigate('/admin-dashboard');
+            navigate('/products');
             return;
         }
 

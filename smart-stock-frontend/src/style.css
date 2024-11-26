@@ -148,7 +148,6 @@ form input:focus, form button:focus {
     text-decoration: none;
     padding: 11px 12px;
     color: #ffffff;
-    margin-left: 10px;
     background-color: #6200ee;
     border: none;
     border-radius: 5px;
@@ -264,3 +263,7 @@ input:focus {
     border-color: #007bff;
 }
 
+span {
+    color: green;
+    font-weight: bold;
+}
