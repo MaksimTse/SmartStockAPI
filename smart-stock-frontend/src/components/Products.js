@@ -92,7 +92,7 @@ const Products = () => {
     return (
         <>
             <div className="background-container"> </div>
-            <div className="container">
+            <div className="container USNone">
                 <Navigation />
                 <h2>Product Management</h2>
                 {message && <p>{message}</p>}
