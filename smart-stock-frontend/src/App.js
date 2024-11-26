@@ -1,26 +1,27 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import AdminUsers from './components/AdminUsers';
-import Products from './components/Products';
-import UserProducts from './components/UserProducts'; // Новый компонент
-import UserOrders from './components/UserOrders';
-import Login from './components/Login';
-import Register from './components/Register';
-import Home from './components/Home';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import './style.css';
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import SupplierLogin from "./components/SupplierLogin";
+import SupplierRegister from "./components/SupplierRegister";
+import AdminDashboard from "./components/AdminDashboard";
 
 const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/admin/products" element={<Products />} />
-            <Route path="/admin/users" element={<AdminUsers />} />
-            <Route path="/user/products" element={<UserProducts />} /> {/* Новый маршрут */}
-            <Route path="/user/orders" element={<UserOrders />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/supplier-login" element={<SupplierLogin />} />
+            <Route path="/supplier-register" element={<SupplierRegister />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/add-product" element={<h2 style={{ color: '#fff' }}>Add Product Page</h2>} />
+            <Route path="/view-customers" element={<h2 style={{ color: '#fff' }}>Customers Page</h2>} />
+            <Route path="/view-suppliers" element={<h2 style={{ color: '#fff' }}>Suppliers Page</h2>} />
         </Routes>
     );
-};
+}
 
 export default App;

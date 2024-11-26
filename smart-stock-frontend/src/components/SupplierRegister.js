@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function Register() {
+function SupplierRegister() {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
 
     const handleRegister = async () => {
         try {
-            await axios.post('http://localhost:5077/api/User/register', {
-                email,
+            await axios.post('http://localhost:5077/api/Supplier/register', {
+                name,
+                contactEmail: email,
                 passwordHash: password,
                 phoneNumber,
             });
-            alert('Registration successful!');
+            alert('Registration successful! Pending admin approval.');
         } catch (error) {
             alert('Registration failed: ' + error.response.data);
         }
@@ -27,8 +29,14 @@ function Register() {
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
                 </p>
-                <h2 className="USNone">Customer Registration</h2>
+                <h2 className="USNone">Supplier Registration</h2>
                 <form>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
                     <input
                         type="email"
                         placeholder="Email"
@@ -51,11 +59,11 @@ function Register() {
                 </form>
                 <p className="USNone">
                     Kas teil on juba konto?{' '}
-                    <Link to="/login" className="link">Logi Sisse</Link>
+                    <Link to="/supplier-login" className="link">Logi Sisse</Link>
                 </p>
             </div>
         </>
     );
 }
 
-export default Register;
+export default SupplierRegister;

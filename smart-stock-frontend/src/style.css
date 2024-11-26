@@ -12,6 +12,7 @@ body {
 .AddText{
     width: 130px;
 }
+
 .background-container {
     position: fixed;
     top: 0;
@@ -22,6 +23,7 @@ body {
     background-size: cover;
     filter: blur(8px) brightness(0.7);
     z-index: -1;
+    pointer-events: none;
 }
 
 .container {
@@ -35,6 +37,10 @@ body {
     z-index: 1;
     position: relative;
     overflow-x: auto;
+}
+
+.USNone{
+    user-select: none;
 }
 
 h2, h3 {
@@ -139,6 +145,7 @@ form input:focus, form button:focus {
 }
 
 .btn2 {
+    text-decoration: none;
     padding: 11px 12px;
     color: #ffffff;
     margin-left: 10px;
@@ -243,6 +250,7 @@ input:not(:placeholder-shown) + label {
     color: #3a3a3a;
 }
 
+/*
 input {
     width: 100%;
     padding: 10px;
@@ -250,7 +258,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+*/
 input:focus {
     outline: none;
     border-color: #007bff;

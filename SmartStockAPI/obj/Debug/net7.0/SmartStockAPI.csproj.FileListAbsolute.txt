@@ -72,3 +72,4 @@ C:\Users\opilane\source\repos\Tsepelevits\SmartStockAPI\SmartStockAPI\obj\Debug\
 C:\Users\opilane\source\repos\Tsepelevits\SmartStockAPI\SmartStockAPI\obj\Debug\net7.0\SmartStockAPI.pdb
 C:\Users\opilane\source\repos\Tsepelevits\SmartStockAPI\SmartStockAPI\obj\Debug\net7.0\SmartStockAPI.genruntimeconfig.cache
 C:\Users\opilane\source\repos\Tsepelevits\SmartStockAPI\SmartStockAPI\obj\Debug\net7.0\ref\SmartStockAPI.dll
+C:\Users\opilane\source\repos\Tsepelevits\SmartStockAPI\SmartStockAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
