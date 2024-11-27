@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode'; // Исправленный импорт
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -18,9 +19,17 @@ function Login() {
                 email,
                 passwordHash: password,
             });
-            alert('Login successful! Token: ' + response.data.token);
+
+            const token = response.data.token;
+            localStorage.setItem('token', token);
+
+            const decodedToken = jwtDecode(token); // Декодируем токен
+            localStorage.setItem('userEmail', email); // Сохраняем email
+            localStorage.setItem('userId', decodedToken.sub); // Сохраняем ID пользователя
+
+            navigate('/customer-products'); // Перенаправление для заказчика
         } catch (error) {
-            alert('Login failed: ' + error.response.data.title);
+            alert('Login failed: ' + (error.response?.data?.title || 'Unknown error'));
         }
     };
 
@@ -50,7 +59,7 @@ function Login() {
                     </button>
                 </form>
                 <p className="USNone">
-                    Kas teil pole kontot?{' '}
+                    Kas teil pole konto?{' '}
                     <Link to="/register" className="link">Registreeri siin</Link>
                 </p>
             </div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wFU9QGXN6mAuk1jGCrOJJyyaKLIS3wrBGGQ/872ttkRuDoLKQJlGMGdKutY0MCo5jtrwZbDRxSxsYu3ruKq4wg==",
+  "dgSpecHash": "o9JYZV/NDlo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\opilane\\source\\repos\\Tsepelevits\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
+  "projectFilePath": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\opilane\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

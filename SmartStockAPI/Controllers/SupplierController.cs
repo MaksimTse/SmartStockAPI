@@ -104,7 +104,7 @@ namespace SmartStockAPI.Controllers
                     return NotFound("Supplier not found.");
                 }
 
-                supplier.IsApproved = false; // Устанавливаем статус неподтверждённого
+                supplier.IsApproved = false; 
                 await _context.SaveChangesAsync();
 
                 return Ok("Supplier unapproved successfully.");

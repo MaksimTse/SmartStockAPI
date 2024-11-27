@@ -68,6 +68,22 @@ namespace SmartStockAPI.Controllers
         }
 
 
+        [HttpPost("{action}")]
+        public async Task<IActionResult> PlaceOrder([FromBody] Order order)
+        {
+            var product = await _context.Storage.FindAsync(order.ProductId);
+            if (product == null)
+                return NotFound("Product not found.");
+
+            product.Quantity -= 1;
+            if (product.Quantity < 0)
+                return BadRequest("Not enough stock.");
+
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+            return Ok("Order placed successfully.");
+        }
+
         // Delete a product
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)

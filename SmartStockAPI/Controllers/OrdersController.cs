@@ -40,6 +40,26 @@ namespace SmartStockAPI.Controllers
             return Ok(orders);
         }
 
+        [HttpGet("customer/{customerId}")]
+        public async Task<IActionResult> GetOrdersByCustomer(int customerId)
+        {
+            var orders = await _context.Orders
+                .Include(o => o.Product)
+                .Where(o => o.UserId == customerId)
+                .Select(o => new
+                {
+                    o.Id,
+                    ProductName = o.Product.ProductName,
+                    Quantity = o.Quantity,
+                    UserPrice = o.Product.UserPrice,
+                    OrderDate = o.OrderDate
+                })
+                .ToListAsync();
+
+            return Ok(orders);
+        }
+
+
         // POST: api/Orders
         [HttpPost]
         public async Task<IActionResult> CreateOrder([FromBody] Order order)
@@ -92,7 +112,7 @@ namespace SmartStockAPI.Controllers
                 return NotFound(new { message = "Order not found" });
             }
 
-            existingOrder.Notes = order.Notes; // Обновляем заметку
+            existingOrder.Notes = order.Notes;
 
             await _context.SaveChangesAsync();
 

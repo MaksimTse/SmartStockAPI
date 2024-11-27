@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode'; // Исправленный импорт
 
 function SupplierLogin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
@@ -13,15 +14,23 @@ function SupplierLogin() {
                 contactEmail: email,
                 passwordHash: password,
             });
-            alert('Login successful! Token: ' + response.data.token);
+
+            const token = response.data.token;
+            localStorage.setItem('token', token);
+
+            const decodedToken = jwtDecode(token); // Декодируем токен
+            localStorage.setItem('userEmail', email); // Сохраняем email
+            localStorage.setItem('userId', decodedToken.sub);
+
+            navigate('/supplier-products'); // Перенаправление для поставщика
         } catch (error) {
-            alert('Login failed: ' + error.response.data);
+            alert('Login failed: ' + (error.response?.data?.title || 'Unknown error'));
         }
     };
 
     return (
         <>
-        <div className="background-container"></div> {}
+            <div className="background-container"></div>
             <div className="container">
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
@@ -40,13 +49,14 @@ function SupplierLogin() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button className="btn2" onClick={handleLogin} type="button">Login</button>
+                    <button className="btn2" onClick={handleLogin} type="button">
+                        Login
+                    </button>
                 </form>
                 <p className="USNone">
-                    Kas teil pole kontot?{' '}
+                    Kas teil pole konto?{' '}
                     <Link to="/supplier-register" className="link">Registreeri siin</Link>
                 </p>
-
             </div>
         </>
     );
