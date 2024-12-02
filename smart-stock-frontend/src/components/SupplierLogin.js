@@ -18,11 +18,11 @@ function SupplierLogin() {
             const token = response.data.token;
             localStorage.setItem('token', token);
 
-            const decodedToken = jwtDecode(token); // Декодируем токен
-            localStorage.setItem('userEmail', email); // Сохраняем email
+            const decodedToken = jwtDecode(token);
+            localStorage.setItem('userEmail', email);
             localStorage.setItem('userId', decodedToken.sub);
 
-            navigate('/supplier-products'); // Перенаправление для поставщика
+            navigate('/supplier-products');
         } catch (error) {
             alert('Login failed: ' + (error.response?.data?.title || 'Unknown error'));
         }
@@ -35,22 +35,22 @@ function SupplierLogin() {
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
                 </p>
-                <h2 className="USNone">Supplier Login</h2>
+                <h2 className="USNone">Tarnija sisselogimine</h2>
                 <form>
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Meil"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Salasõna"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <button className="btn2" onClick={handleLogin} type="button">
-                        Login
+                        Logi sisse
                     </button>
                 </form>
                 <p className="USNone">

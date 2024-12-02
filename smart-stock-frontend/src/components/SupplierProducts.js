@@ -58,7 +58,7 @@ const SupplierProducts = () => {
             };
 
             await axios.post('http://localhost:5077/api/Supplies/add', supplyData);
-            setMessage('Product added to supply!');
+            setMessage('Toode lisatud tarnimisele!');
             setShowModal(false);
             fetchProducts();
             fetchSupplies();
@@ -70,35 +70,34 @@ const SupplierProducts = () => {
 
     const exportSuppliesToPDF = () => {
         const doc = new jsPDF();
-        const tableColumn = ['ID', 'Product Name', 'Quantity', 'Price per Item', 'Total Price', 'Supply Date'];
+        const tableColumn = ['ID', 'Toote nimi', 'Kogus', 'Hind kauba kohta', 'Hind kokku', 'Tarnekuupäev'];
         const tableRows = [];
         let totalPrice = 0;
-        const randomInvoiceNumber = Math.floor(100000 + Math.random() * 900000); // Генерация случайного номера
-        const email = localStorage.getItem('userEmail'); // Предполагается, что email сохранён в localStorage
-        const currentDate = new Date().toLocaleString(); // Текущая дата
+        const randomInvoiceNumber = Math.floor(100000 + Math.random() * 900000);
+        const email = localStorage.getItem('userEmail');
+        const currentDate = new Date().toLocaleString();
 
         supplies.forEach((supply) => {
-            // Проверяем и используем цену поставки (supplierPrice) для правильного отображения
-            const pricePerItem = supply.supplierPrice || 0; // Используем supplierPrice для правильного отображения
+            const pricePerItem = supply.supplierPrice || 0;
             const itemTotal = supply.quantity * pricePerItem;
 
             const supplyData = [
                 supply.id,
-                supply.productName || 'N/A', // Подстраховка для отсутствующего имени
+                supply.productName || 'N/A',
                 supply.quantity,
-                pricePerItem.toFixed(2), // Цена за единицу
-                itemTotal.toFixed(2), // Итоговая цена за этот товар
-                new Date(supply.supplyDate).toLocaleString(), // Дата поставки
+                pricePerItem.toFixed(2),
+                itemTotal.toFixed(2),
+                new Date(supply.supplyDate).toLocaleString(),
             ];
 
             tableRows.push(supplyData);
-            totalPrice += itemTotal; // Суммируем общую стоимость
+            totalPrice += itemTotal;
         });
 
-        doc.text(`Invoice #: ${randomInvoiceNumber}`, 14, 15); // Номер счета
-        doc.text(`Supplier Email: ${email || 'N/A'}`, 14, 25); // Email поставщика
-        doc.text(`Generated on: ${currentDate}`, 14, 35); // Дата создания PDF
-        doc.text('Supplier Supplies', 14, 45); // Заголовок
+        doc.text(`Arve #: ${randomInvoiceNumber}`, 14, 15);
+        doc.text(`Tarnija e-post: ${email || 'N/A'}`, 14, 25);
+        doc.text(`Loodud: ${currentDate}`, 14, 35);
+        doc.text('Tarnija tarvikud', 14, 45);
 
         doc.autoTable({
             head: [tableColumn],
@@ -106,8 +105,8 @@ const SupplierProducts = () => {
             startY: 50,
         });
 
-        doc.text(`Total Price: ${totalPrice.toFixed(2)}`, 14, doc.lastAutoTable.finalY + 10); // Итоговая цена
-        doc.save(`Supplier_Supplies_${randomInvoiceNumber}.pdf`); // Сохраняем файл
+        doc.text(`Total Price: ${totalPrice.toFixed(2)}`, 14, doc.lastAutoTable.finalY + 10);
+        doc.save(`Supplier_Supplies_${randomInvoiceNumber}.pdf`);
     };
 
     const handleLogout = () => {
@@ -119,18 +118,18 @@ const SupplierProducts = () => {
         <>
             <div className="background-container"></div>
             <div className="container">
-                <button className="logout-btn" onClick={handleLogout}>Logout</button>
-                <h2>Available Products</h2>
+                <button className="logout-btn" onClick={handleLogout}>Logi välja</button>
+                <h2>Saadaolevad tooted</h2>
                 {message && <p>{message}</p>}
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Actions</th>
+                        <th>Kategooria</th>
+                        <th>Nimi</th>
+                        <th>Hind</th>
+                        <th>Kogus</th>
+                        <th>Tegevused</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -149,7 +148,7 @@ const SupplierProducts = () => {
                                         setShowModal(true);
                                     }}
                                 >
-                                    Supply
+                                    Tarne
                                 </button>
                             </td>
                         </tr>
@@ -157,17 +156,17 @@ const SupplierProducts = () => {
                     </tbody>
                 </table>
 
-                <h2>Your Supplies</h2>
+                <h2>Teie tarvikud</h2>
                 <button className="btn2" onClick={exportSuppliesToPDF}>
-                    Export to PDF
+                    Ekspordi PDF-i
                 </button>
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Supply Date</th>
+                        <th>Toote nimi</th>
+                        <th>Kogus</th>
+                        <th>Tarnekuupäev</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -184,7 +183,7 @@ const SupplierProducts = () => {
 
                 {showModal && (
                     <div className="modal">
-                        <h3>Supply Product</h3>
+                        <h3>Tarnige toodet</h3>
                         <p>{selectedProduct?.productName}</p>
                         <p>Current Quantity: {selectedProduct?.quantity}</p>
                         <input
@@ -193,8 +192,8 @@ const SupplierProducts = () => {
                             value={quantity}
                             onChange={(e) => setQuantity(Number(e.target.value))}
                         />
-                        <button className="btn2" onClick={addToSupply}>Confirm</button>
-                        <button className="logout-btn" onClick={() => setShowModal(false)}>Cancel</button>
+                        <button className="btn2" onClick={addToSupply}>Kinnita</button>
+                        <button className="logout-btn" onClick={() => setShowModal(false)}>Tühista</button>
                     </div>
                 )}
             </div>

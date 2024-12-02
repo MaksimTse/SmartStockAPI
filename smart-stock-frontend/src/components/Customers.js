@@ -23,13 +23,13 @@ const Customers = () => {
         <div className="background-container"></div> {}
             <div className="container USNone">
                 <Navigation />
-                <h2>Customers</h2>
+                <h2>Kliendid</h2>
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
+                        <th>Meil</th>
+                        <th>Telefoninumber</th>
                     </tr>
                     </thead>
                     <tbody>

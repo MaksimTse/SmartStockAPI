@@ -31,23 +31,23 @@ function Register() {
                 <form>
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Meil"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         type="tel"
-                        placeholder="Phone Number"
+                        placeholder="Telefoninumber"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                     />
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Salasõna"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button className="btn2" onClick={handleRegister} type="button">Register</button>
+                    <button className="btn2" onClick={handleRegister} type="button">Registreeri</button>
                 </form>
                 <p className="USNone">
                     Kas teil on juba konto?{' '}

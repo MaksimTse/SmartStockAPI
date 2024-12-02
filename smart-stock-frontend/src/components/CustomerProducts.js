@@ -69,7 +69,7 @@ const CustomerProducts = () => {
 
     const exportOrdersToPDF = () => {
         const doc = new jsPDF();
-        const tableColumn = ['ID', 'Product Name', 'Quantity', 'Price per Item', 'Total Price', 'Order Date'];
+        const tableColumn = ['ID', 'Toote nimi', 'Kogus', 'Hind kauba kohta', 'Hind kokku', 'Tellimuse kuupäev'];
         const tableRows = [];
         let totalPrice = 0;
         const randomInvoiceNumber = Math.floor(100000 + Math.random() * 900000);
@@ -77,7 +77,7 @@ const CustomerProducts = () => {
         const currentDate = new Date().toLocaleString();
 
         orders.forEach((order) => {
-            const pricePerItem = order.userPrice; // Теперь UserPrice приходит из API
+            const pricePerItem = order.userPrice;
             const itemTotal = order.quantity * pricePerItem;
 
             const orderData = [
@@ -93,10 +93,10 @@ const CustomerProducts = () => {
             totalPrice += itemTotal;
         });
 
-        doc.text(`Invoice #: ${randomInvoiceNumber}`, 14, 15);
-        doc.text(`Customer Email: ${email}`, 14, 25);
-        doc.text(`Generated on: ${currentDate}`, 14, 35);
-        doc.text('Customer Orders', 14, 45);
+        doc.text(`Arve #: ${randomInvoiceNumber}`, 14, 15);
+        doc.text(`Kliendi e-post: ${email}`, 14, 25);
+        doc.text(`Loodud: ${currentDate}`, 14, 35);
+        doc.text('Klientide tellimused', 14, 45);
 
         doc.autoTable({
             head: [tableColumn],
@@ -104,8 +104,8 @@ const CustomerProducts = () => {
             startY: 50,
         });
 
-        doc.text(`Total Price: ${totalPrice.toFixed(2)}`, 14, doc.lastAutoTable.finalY + 10);
-        doc.save(`Customer_Orders_${randomInvoiceNumber}.pdf`);
+        doc.text(`Hind kokku: ${totalPrice.toFixed(2)}`, 14, doc.lastAutoTable.finalY + 10);
+        doc.save(`Kliendi_tellimused_${randomInvoiceNumber}.pdf`);
     };
 
 
@@ -119,18 +119,18 @@ const CustomerProducts = () => {
         <>
             <div className="background-container"></div>
             <div className="container">
-                <button className="logout-btn" onClick={handleLogout}>Logout</button>
-                <h2>Available Products</h2>
+                <button className="logout-btn" onClick={handleLogout}>Logi välja</button>
+                <h2>Saadaolevad tooted</h2>
                 {message && <p>{message}</p>}
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Actions</th>
+                        <th>Kategooria</th>
+                        <th>Nimi</th>
+                        <th>Hind</th>
+                        <th>Kogus</th>
+                        <th>Tegevused</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -149,7 +149,7 @@ const CustomerProducts = () => {
                                         setShowModal(true);
                                     }}
                                 >
-                                    Order
+                                    Telli
                                 </button>
                             </td>
                         </tr>
@@ -157,17 +157,17 @@ const CustomerProducts = () => {
                     </tbody>
                 </table>
 
-                <h2>Your Orders</h2>
+                <h2>Teie tellimused</h2>
                 <button className="btn2" onClick={exportOrdersToPDF}>
-                    Export to PDF
+                    Ekspordi PDF-i
                 </button>
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Order Date</th>
+                        <th>Toote nimi</th>
+                        <th>Kogus</th>
+                        <th>Tellimuse kuupäev</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -184,7 +184,7 @@ const CustomerProducts = () => {
 
                 {showModal && (
                     <div className="modal">
-                        <h3>Order Product</h3>
+                        <h3>Telli Toode</h3>
                         <p>{selectedProduct?.productName}</p>
                         <p>Available: {selectedProduct?.quantity}</p>
                         <input
@@ -194,8 +194,8 @@ const CustomerProducts = () => {
                             value={quantity}
                             onChange={(e) => setQuantity(parseInt(e.target.value))}
                         />
-                        <button className="btn2" onClick={placeOrder}>Confirm</button>
-                        <button className="logout-btn" onClick={() => setShowModal(false)}>Cancel</button>
+                        <button className="btn2" onClick={placeOrder}>Kinnita</button>
+                        <button className="logout-btn" onClick={() => setShowModal(false)}>Tühista</button>
                     </div>
                 )}
             </div>

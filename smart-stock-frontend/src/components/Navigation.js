@@ -10,10 +10,10 @@ const Navigation = () => {
 
     return (
         <div className="navigation">
-            <Link to="/products" className="nav-link">Products</Link>
-            <Link to="/customers" className="nav-link">Customers</Link>
-            <Link to="/suppliers" className="nav-link">Suppliers</Link>
-            <button className="logout-btn" onClick={handleLogout}>Logout</button>
+            <Link to="/products" className="nav-link">Tooted</Link>
+            <Link to="/customers" className="nav-link">Kliendid</Link>
+            <Link to="/suppliers" className="nav-link">Tarnijad</Link>
+            <button className="logout-btn" onClick={handleLogout}>Logi välja</button>
         </div>
     );
 };

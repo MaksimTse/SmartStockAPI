@@ -19,7 +19,7 @@ const Suppliers = () => {
             await axios.put(`http://localhost:5077/api/Supplier/approve/${id}`);
             fetchSuppliers();
         } catch (error) {
-            console.error('Error approving supplier:', error);
+            console.error('Tarnija kinnitamisel tekkis viga:', error);
         }
     };
 
@@ -28,7 +28,7 @@ const Suppliers = () => {
             await axios.put(`http://localhost:5077/api/Supplier/unapprove/${id}`);
             fetchSuppliers();
         } catch (error) {
-            console.error('Error unapproving supplier:', error);
+            console.error('Viga tarnija heakskiitmise tühistamisel:', error);
         }
     };
 
@@ -41,15 +41,15 @@ const Suppliers = () => {
             <div className="background-container"></div>
             <div className="container USNone">
                 <Navigation />
-                <h2>Suppliers</h2>
+                <h2>Tarnijad</h2>
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Status</th>
+                        <th>Nimi</th>
+                        <th>Meil</th>
+                        <th>Telefoninumber</th>
+                        <th>Staatus</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -62,12 +62,12 @@ const Suppliers = () => {
                             <td>
                                 {supplier.isApproved ? (
                                     <>
-                                        <span>Accepted</span>
+                                        <span>Vastu võetud</span>
                                         <button
                                             className="btn2"
                                             onClick={() => unapproveSupplier(supplier.id)}
                                         >
-                                            Unapprove
+                                            Tühista
                                         </button>
                                     </>
                                 ) : (
@@ -75,7 +75,7 @@ const Suppliers = () => {
                                         className="btn2"
                                         onClick={() => approveSupplier(supplier.id)}
                                     >
-                                        Approve
+                                        Kinnita
                                     </button>
                                 )}
                             </td>

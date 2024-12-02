@@ -17,7 +17,7 @@ const Products = () => {
     const [message, setMessage] = useState('');
     const [isEditing, setIsEditing] = useState(false);
     const [editProductId, setEditProductId] = useState(null);
-    const [showForm, setShowForm] = useState(false); // Состояние видимости формы
+    const [showForm, setShowForm] = useState(false);
 
     const fetchProducts = async () => {
         try {
@@ -31,7 +31,7 @@ const Products = () => {
     const deleteProduct = async (id) => {
         try {
             await axios.delete(`http://localhost:5077/api/Storage/${id}`);
-            setMessage('Product deleted successfully.');
+            setMessage('Toote kustutamine õnnestus.');
             fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);
@@ -43,10 +43,10 @@ const Products = () => {
         try {
             if (isEditing) {
                 await axios.put(`http://localhost:5077/api/Storage/${editProductId}`, newProduct);
-                setMessage('Product updated successfully.');
+                setMessage('Toote värskendamine õnnestus.');
             } else {
                 await axios.post('http://localhost:5077/api/Storage', newProduct);
-                setMessage('Product added successfully.');
+                setMessage('Toode edukalt lisatud.');
             }
             fetchProducts();
             resetForm();
@@ -94,20 +94,20 @@ const Products = () => {
             <div className="background-container"> </div>
             <div className="container USNone">
                 <Navigation />
-                <h2>Product Management</h2>
+                <h2>Tootehaldus</h2>
                 {message && <p>{message}</p>}
 
                 <table>
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Category</th>
-                        <th>Location</th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Supplier Price</th>
-                        <th>User Price</th>
-                        <th>Actions</th>
+                        <th>Kategooria</th>
+                        <th>Asukoht</th>
+                        <th>Toote nimi</th>
+                        <th>Kogus</th>
+                        <th>Tarnija hind</th>
+                        <th>Kasutaja hind</th>
+                        <th>Tegevused</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -121,8 +121,8 @@ const Products = () => {
                             <td>{product.supplierPrice}</td>
                             <td>{product.userPrice}</td>
                             <td>
-                                <button className="btn2" onClick={() => startEditing(product)}>Edit</button>
-                                <button className="logout-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
+                                <button className="btn2" onClick={() => startEditing(product)}>Muuda</button>
+                                <button className="logout-btn" onClick={() => deleteProduct(product.id)}>Kustuta</button>
                             </td>
                         </tr>
                     ))}
@@ -136,62 +136,81 @@ const Products = () => {
                         onMouseEnter={(e) => (e.target.style.color = '#6200ee')}
                         onMouseLeave={(e) => (e.target.style.color = '#ffffff')}
                     >
-                        Add New Product
+                        Lisa uus toode
                     </h3>
                 )}
 
                 {showForm && (
                     <form onSubmit={saveProduct}>
-                        <input
-                            type="text"
-                            placeholder="Category"
-                            value={newProduct.category}
-                            onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
-                            required
-                        />
-                        <input
-                            type="text"
-                            placeholder="Location"
-                            value={newProduct.location}
-                            onChange={(e) => setNewProduct({ ...newProduct, location: e.target.value })}
-                            required
-                        />
-                        <input
-                            type="text"
-                            placeholder="Product Name"
-                            value={newProduct.productName}
-                            onChange={(e) => setNewProduct({ ...newProduct, productName: e.target.value })}
-                            required
-                        />
-                        <input
-                            type="number"
-                            placeholder="Quantity"
-                            value={newProduct.quantity}
-                            onChange={(e) => setNewProduct({ ...newProduct, quantity: parseInt(e.target.value) })}
-                            required
-                        />
-                        <input
-                            type="number"
-                            placeholder="Supplier Price"
-                            value={newProduct.supplierPrice}
-                            onChange={(e) => setNewProduct({ ...newProduct, supplierPrice: parseFloat(e.target.value) })}
-                            required
-                        />
-                        <input
-                            type="number"
-                            placeholder="User Price"
-                            value={newProduct.userPrice}
-                            onChange={(e) => setNewProduct({ ...newProduct, userPrice: parseFloat(e.target.value) })}
-                            required
-                        />
+                        <div className="input-container">
+                            <input
+                                type="text"
+                                placeholder=" "
+                                value={newProduct.category}
+                                onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
+                                required
+                            />
+                            <label>Kategooria</label>
+                        </div>
+                        <div className="input-container">
+                            <input
+                                type="text"
+                                placeholder=" "
+                                value={newProduct.location}
+                                onChange={(e) => setNewProduct({ ...newProduct, location: e.target.value })}
+                                required
+                            />
+                            <label>Аsukoht</label>
+                        </div>
+                        <div className="input-container">
+                            <input
+                                type="text"
+                                placeholder=" "
+                                value={newProduct.productName}
+                                onChange={(e) => setNewProduct({ ...newProduct, productName: e.target.value })}
+                                required
+                            />
+                            <label>Toote nimi</label>
+                        </div>
+                        <div className="input-container">
+                            <input
+                                type="number"
+                                placeholder=" "
+                                value={newProduct.quantity}
+                                onChange={(e) => setNewProduct({ ...newProduct, quantity: parseInt(e.target.value) })}
+                                required
+                            />
+                            <label>Kogus</label>
+                        </div>
+                        <div className="input-container">
+                            <input
+                                type="number"
+                                placeholder=" "
+                                value={newProduct.supplierPrice}
+                                onChange={(e) => setNewProduct({ ...newProduct, supplierPrice: parseFloat(e.target.value) })}
+                                required
+                            />
+                            <label>Tarnija hind</label>
+                        </div>
+                        <div className="input-container">
+                            <input
+                                type="number"
+                                placeholder=" "
+                                value={newProduct.userPrice}
+                                onChange={(e) => setNewProduct({ ...newProduct, userPrice: parseFloat(e.target.value) })}
+                                required
+                            />
+                            <label>Kasutaja hind</label>
+                        </div>
                         <button className="btn2" type="submit">
-                            {isEditing ? 'Update Product' : 'Add Product'}
+                            {isEditing ? 'Uuenda toodet' : 'Lisa toode'}
                         </button>
                         <button className="logout-btn" type="button" onClick={resetForm}>
-                            Cancel
+                            Tühista
                         </button>
                     </form>
                 )}
+
             </div>
         </>
     );

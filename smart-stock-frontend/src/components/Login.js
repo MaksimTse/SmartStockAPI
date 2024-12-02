@@ -23,11 +23,11 @@ function Login() {
             const token = response.data.token;
             localStorage.setItem('token', token);
 
-            const decodedToken = jwtDecode(token); // Декодируем токен
-            localStorage.setItem('userEmail', email); // Сохраняем email
-            localStorage.setItem('userId', decodedToken.sub); // Сохраняем ID пользователя
+            const decodedToken = jwtDecode(token);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userId', decodedToken.sub);
 
-            navigate('/customer-products'); // Перенаправление для заказчика
+            navigate('/customer-products');
         } catch (error) {
             alert('Login failed: ' + (error.response?.data?.title || 'Unknown error'));
         }
@@ -40,7 +40,7 @@ function Login() {
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
                 </p>
-                <h2 className="USNone">Customer Login</h2>
+                <h2 className="USNone">Kliendi sisselogimine</h2>
                 <form>
                     <input
                         type="email"

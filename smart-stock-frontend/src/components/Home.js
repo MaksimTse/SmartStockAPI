@@ -8,10 +8,10 @@ function Home() {
         <>
         <div className="background-container"></div> {}
             <div className="container">
-                <h2 className="USNone">Welcome to Smart Stock</h2>
-                <p className="USNone">Please select your user type:</p>
-                <button className="btn2" onClick={() => navigate('/login')}>Customer</button>
-                <button className="btn2" onClick={() => navigate('/supplier-login')}>Supplier</button>
+                <h2 className="USNone">Tere tulemast Smart Stocki</h2>
+                <p className="USNone">Palun valige oma kasutaja tüüp:</p>
+                <button className="btn2" onClick={() => navigate('/login')}>Klient</button>
+                <button className="btn2 margin10" onClick={() => navigate('/supplier-login')}>Tarnija</button>
             </div>
         </>
     );

@@ -16,9 +16,9 @@ function SupplierRegister() {
                 passwordHash: password,
                 phoneNumber,
             });
-            alert('Registration successful! Pending admin approval.');
+            alert('Registreerimine õnnestus! Ootab administraatori kinnitust.');
         } catch (error) {
-            alert('Registration failed: ' + error.response.data);
+            alert('Registreerimine ebaõnnestus: ' + error.response.data);
         }
     };
 
@@ -29,33 +29,33 @@ function SupplierRegister() {
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
                 </p>
-                <h2 className="USNone">Supplier Registration</h2>
+                <h2 className="USNone">Tarnija registreerimine</h2>
                 <form>
                     <input
                         type="text"
-                        placeholder="Name"
+                        placeholder="Nimi"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Meil"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         type="tel"
-                        placeholder="Phone Number"
+                        placeholder="Telefoninumber"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                     />
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Salasõna"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button className="btn2" onClick={handleRegister} type="button">Register</button>
+                    <button className="btn2" onClick={handleRegister} type="button">Registreeri</button>
                 </form>
                 <p className="USNone">
                     Kas teil on juba konto?{' '}

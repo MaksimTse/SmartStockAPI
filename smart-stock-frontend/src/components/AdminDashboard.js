@@ -15,16 +15,16 @@ const AdminDashboard = () => {
             <div className="container">
                 <h2 className="USNone">Admin Dashboard</h2>
                 <button className="btn2" onClick={() => navigate('/products')}>
-                    Add New Product
+                    Lisa uus toode
                 </button>
                 <button className="btn2" onClick={() => navigate('/customers')}>
-                    View Customers
+                    Vaata kliente
                 </button>
                 <button className="btn2" onClick={() => navigate('/suppliers')}>
-                    View Suppliers
+                    Vaadake tarnijaid
                 </button>
                 <button className="logout-btn USNone" onClick={handleLogout}>
-                    Logout
+                    Logi välja
                 </button>
             </div>
         </>
