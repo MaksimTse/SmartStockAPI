@@ -27,7 +27,7 @@ function Register() {
                 <p className="USNone">
                     <Link to="/" className="btn2">Kodu</Link>
                 </p>
-                <h2 className="USNone">Customer Registration</h2>
+                <h2 className="USNone">Kliendi registreerimine</h2>
                 <form>
                     <input
                         type="email"

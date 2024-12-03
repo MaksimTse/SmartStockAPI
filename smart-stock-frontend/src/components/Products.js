@@ -160,7 +160,7 @@ const Products = () => {
                                 onChange={(e) => setNewProduct({ ...newProduct, location: e.target.value })}
                                 required
                             />
-                            <label>Аsukoht</label>
+                            <label>Asukoht (A1 - Shelf 1)</label>
                         </div>
                         <div className="input-container">
                             <input

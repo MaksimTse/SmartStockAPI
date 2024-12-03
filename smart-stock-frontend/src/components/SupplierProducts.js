@@ -185,7 +185,7 @@ const SupplierProducts = () => {
                     <div className="modal">
                         <h3>Tarnige toodet</h3>
                         <p>{selectedProduct?.productName}</p>
-                        <p>Current Quantity: {selectedProduct?.quantity}</p>
+                        <p>Praegune kogus: {selectedProduct?.quantity}</p>
                         <input
                             type="number"
                             min="1"

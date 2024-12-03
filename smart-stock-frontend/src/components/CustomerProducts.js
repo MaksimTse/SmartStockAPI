@@ -58,7 +58,7 @@ const CustomerProducts = () => {
                 userId: customerId,
                 quantity,
             });
-            setMessage('Order placed successfully!');
+            setMessage('Tellimus sooritatud edukalt!');
             setShowModal(false);
             fetchProducts();
             fetchOrders();
@@ -186,7 +186,7 @@ const CustomerProducts = () => {
                     <div className="modal">
                         <h3>Telli Toode</h3>
                         <p>{selectedProduct?.productName}</p>
-                        <p>Available: {selectedProduct?.quantity}</p>
+                        <p>Saadaval: {selectedProduct?.quantity}</p>
                         <input
                             type="number"
                             min="1"
