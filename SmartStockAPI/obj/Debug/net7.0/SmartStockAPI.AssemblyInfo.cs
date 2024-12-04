@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartStockAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acb14ca06fddf7ad081ade7d17131ef67a13b4e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3c54be5ceb31a4e3d240e951b85ce915cf9e976")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartStockAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartStockAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2916,23 +2916,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\opilane\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
       "projectName": "SmartStockAPI",
-      "projectPath": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\obj\\",
+      "projectPath": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
+      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3011,7 +3011,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

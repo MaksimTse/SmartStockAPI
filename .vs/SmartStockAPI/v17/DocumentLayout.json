@@ -1,103 +1,104 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\SmartStockAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\supplierlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\supplierlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\supplierlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\supply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\supply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\supply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\controllers\\suppliescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\controllers\\suppliescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\controllers\\suppliescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\controllers\\storagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\controllers\\storagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\controllers\\storagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\smartstockapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\smartstockapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\smartstockapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241113095924_modelordercreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241113095924_modelordercreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241113095924_modelordercreate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SmartStockDB/True/SqlTable/dbo.Storage.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241113093535_ordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241113093535_ordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241113093535_ordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241113095533_modelordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241113095533_modelordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241113095533_modelordercreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241113082308_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241113082308_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241113082308_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241114092640_newday1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241114092640_newday1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241114092640_newday1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241127075659_addsupplymodel2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241127075659_addsupplymodel2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241127075659_addsupplymodel2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\user\\desktop\\smartstockapi\\smartstockapi\\migrations\\20241127074828_addsupplymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|c:\\users\\opilane\\source\\repos\\maksim_tsepelevits_tarpv22\\smartstockapi\\smartstockapi\\migrations\\20241127074828_addsupplymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AADF2C65-C339-4AC2-A699-0CE1F20283A2}|SmartStockAPI\\SmartStockAPI.csproj|solutionrelative:smartstockapi\\migrations\\20241127074828_addsupplymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -108,81 +109,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SupplierLoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\SupplierLoginDTO.cs",
-              "RelativeDocumentMoniker": "SmartStockAPI\\Models\\SupplierLoginDTO.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\SupplierLoginDTO.cs",
-              "RelativeToolTip": "SmartStockAPI\\Models\\SupplierLoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T09:27:07.706Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "SmartStockAPI\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAwG8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T09:25:02.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T09:25:02.105Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "SmartStockAPI\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -192,22 +139,21 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Supplier.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Supplier.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Models\\Supplier.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Supplier.cs",
               "RelativeToolTip": "SmartStockAPI\\Models\\Supplier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:02:10.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T08:02:10.724Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Supply.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Supply.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Supply.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Models\\Supply.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Supply.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Supply.cs",
               "RelativeToolTip": "SmartStockAPI\\Models\\Supply.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,9 +163,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\User.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\User.cs",
               "RelativeToolTip": "SmartStockAPI\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -229,9 +175,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "StorageController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\StorageController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\StorageController.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Controllers\\StorageController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\StorageController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\StorageController.cs",
               "RelativeToolTip": "SmartStockAPI\\Controllers\\StorageController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -241,48 +187,58 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "SmartStockAPI\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:07:00.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:07:00.263Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Program.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Program.cs",
               "RelativeToolTip": "SmartStockAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAewDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T09:59:25.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SupplierLoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\SupplierLoginDTO.cs",
+              "RelativeDocumentMoniker": "SmartStockAPI\\Models\\SupplierLoginDTO.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\SupplierLoginDTO.cs",
+              "RelativeToolTip": "SmartStockAPI\\Models\\SupplierLoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T09:27:07.706Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T16:34:37.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T16:34:37.46Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "SuppliesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\SuppliesController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\SuppliesController.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Controllers\\SuppliesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\SuppliesController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\SuppliesController.cs",
               "RelativeToolTip": "SmartStockAPI\\Controllers\\SuppliesController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAswDMAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -292,35 +248,33 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Order.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Order.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Order.cs",
               "RelativeToolTip": "SmartStockAPI\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T09:22:53.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T09:22:53.053Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Storage.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Storage.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Storage.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Models\\Storage.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Models\\Storage.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Models\\Storage.cs",
               "RelativeToolTip": "SmartStockAPI\\Models\\Storage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:04:26.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:04:26.225Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "SupplierController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\SupplierController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Controllers\\SupplierController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Controllers\\SupplierController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Controllers\\SupplierController.cs",
               "RelativeToolTip": "SmartStockAPI\\Controllers\\SupplierController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAcwGoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -330,9 +284,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "SmartStockAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
               "RelativeDocumentMoniker": "SmartStockAPI\\SmartStockAPI.csproj",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\SmartStockAPI.csproj",
               "RelativeToolTip": "SmartStockAPI\\SmartStockAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -342,9 +296,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "20241127075659_AddSupplyModel2.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241127075659_AddSupplyModel2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -354,9 +308,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "20241113095924_ModelOrderCreate2.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241113095924_ModelOrderCreate2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -366,9 +320,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "20241127074828_AddSupplyModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241127074828_AddSupplyModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -378,9 +332,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "20241114092640_NewDay1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241114092640_NewDay1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -399,9 +353,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "20241113093535_OrderCreate.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241113093535_OrderCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -411,9 +365,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "20241113095533_ModelOrderCreate.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241113095533_ModelOrderCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -423,9 +377,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\appsettings.json",
               "RelativeDocumentMoniker": "SmartStockAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\appsettings.json",
               "RelativeToolTip": "SmartStockAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -435,9 +389,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "20241113082308_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
               "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
               "RelativeToolTip": "SmartStockAPI\\Migrations\\20241113082308_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -448,21 +402,11 @@
               "DocumentIndex": 17,
               "Title": "20241113074615_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
+              "RelativeDocumentMoniker": "SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
-              "RelativeToolTip": "..\\..\\..\\opilane\\source\\repos\\Maksim_Tsepelevits_TARpv22\\SmartStockAPI\\SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
+              "RelativeToolTip": "SmartStockAPI\\Migrations\\20241113074615_InitialCreate.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T07:46:15.593Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 72,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }

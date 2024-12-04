@@ -282,7 +282,7 @@ span {
 .input-container input {
     flex: 1;
     padding: 10px;
-    padding-right: 100px; /* Для места справа под лейбл */
+    padding-right: 100px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #2a2a2a;

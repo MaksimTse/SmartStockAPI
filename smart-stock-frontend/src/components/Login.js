@@ -44,13 +44,13 @@ function Login() {
                 <form>
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Meil"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Salasõna"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
